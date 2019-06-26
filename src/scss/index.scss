@@ -1,10 +1,20 @@
+$bgBar: #363d4d;
+$bgBarWidgets: #f3c126;
+$borderColor: gray;
+$fontBarColor: white;
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.bar {
+.toolbar-wrapper {
+    position: fixed;
+}
+
+// toolbar styles
+.show-bar {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,12 +22,56 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 4px solid gray;
+    border: 4px solid $borderColor;
     font-size: 12px;
     font-weight: 400;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bgBar;
+    width: 100%;
+    height: 45px;
+    color: $fontBarColor;
+    
+    .bar-info
+    {  
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
+        span {
+            &:nth-child(1) {
+                margin-top: 14px;
+                font-family: Arial;
+                font-size: 15px;
+            }
+            
+            &:nth-child(2) {
+                background-color: $bgBarWidgets;
+                padding: 5px 10px;
+                margin-left: 10px;
+                margin-top: 10px;
+                font-size: 12px;
+                font-weight: 400;
+                cursor: pointer;
+            } 
+            &:nth-child(3) {
+                position: absolute;
+                top: 14px;
+                right: 10%;
+                cursor: pointer;
+                font-family: Arial;
+                font-size: 18px;
+            }
+        }
+    }
 }
