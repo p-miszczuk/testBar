@@ -12,6 +12,7 @@ and from file index.html
 classes toolbar-wrapper, show-bar, bar
 
 //html code
+<code>
 <div class="toolbar-wrapper">
     <!-- bar button -->
     <div class="show-bar">
@@ -27,9 +28,10 @@ classes toolbar-wrapper, show-bar, bar
        </div>
     </div>
 </div>
+</code>
 
 javascript links and code to start
-
+<code>
 <script src="build/widget.js"></script>
     <script type="text/javascript">
         window.addEventListener('DOMContentLoaded', function(e) {
@@ -39,6 +41,7 @@ javascript links and code to start
             });
      });
 </script>
+</code>
 
 and style link
 <link rel="stylesheet" href="src/css/index.css">
