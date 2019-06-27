@@ -18,14 +18,14 @@
     barButton.addEventListener("click",handleShowBar,false);
     barExit.addEventListener("click",handleHideBar,false);
 
-    //set bar
+    //set bar - slide down
     function handleShowBar(e) { 
       e.preventDefault();
       if (e.target.nextElementSibling.offsetHeight === 0)
         bar.classList.toggle('slide');
     }
 
-    //hide bar
+    //hide bar - slide up
     function handleHideBar(e) {
       e.preventDefault();
       bar.classList.toggle('slide');
