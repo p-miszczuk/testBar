@@ -21,14 +21,14 @@
     //set bar
     function handleShowBar(e) { 
       e.preventDefault();
-      if (bar.style.display === "none" || bar.style.display == "")
-        bar.style.display = "block";
+      if (e.target.nextElementSibling.offsetHeight === 0)
+        bar.classList.toggle('slide');
     }
 
     //hide bar
     function handleHideBar(e) {
       e.preventDefault();
-      bar.style.display = "none";
+      bar.classList.toggle('slide');
     }
 
   }
