@@ -11,6 +11,9 @@ function Bar(data) {
     var bar = document.querySelector('.bar');
     var barExit = document.getElementById("bar-exit");
     var text = document.getElementById('bar-text');
+    var btnGet = document.querySelector(".bar-info button");
+    var btnArt = document.getElementById("bar-alert");
+    var btnArtClose = document.getElementById("bar-alert-close");
 
     //set message and bar's position
     text.innerHTML = this.message;
@@ -19,6 +22,8 @@ function Bar(data) {
     // listeners
     barButton.addEventListener("click", handleShowBar, false);
     barExit.addEventListener("click", handleHideBar, false);
+    btnGet.addEventListener("click", handleGetWidget, false);
+    btnArtClose.addEventListener("click", handleArtClose, false);
 
     //set bar - slide down
     function handleShowBar(e) {
@@ -30,5 +35,16 @@ function Bar(data) {
     function handleHideBar(e) {
         e.preventDefault();
         bar.classList.toggle('slide');
+    }
+
+    //
+    function handleGetWidget(e) {
+        e.preventDefault();
+        btnArt.style.display = "block";
+    }
+
+    function handleArtClose(e) {
+        e.preventDefault();
+        btnArt.style.display = "none";
     }
 }
